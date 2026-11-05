@@ -6,8 +6,10 @@ import Card from '../components/Card.astro'
 <Layout title="Karl, with a K!">
 	<ul>
 		<li><a href="/projects">My Projects</a></li>
-		<li><a href="https://www.linkedin.com/in/karlarabit/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-		<li><a href="mailto:karl@cyberacad.org">Email me!</a></li>
+		<li><a href="/about">About</a></li>
+		<li><a href="/contact">Contact me!</a></li>
+		<!-- <li><a href="https://www.linkedin.com/in/karlarabit/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li> -->
+		<!-- <li><a href="mailto:karl@cyberacad.org">Email me!</a></li> -->
 	</ul>
 
 </Layout>
@@ -25,7 +27,13 @@ import Card from '../components/Card.astro'
 		padding-top: 1rem;
 		padding-bottom: 1rem;
 		padding-left: 1rem;
+		transition: color 0.2s;
 	}
+
+	a:hover {
+		color: var(--accent)
+	}
+
 
 	li {
 		list-style: none;
