@@ -30,4 +30,22 @@
     h1 {
         color: var(--accent)
     }
+
+    img {
+        animation: spin 15s linear infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        img {
+            animation: none;
+        }
+    }
+
+    img:hover {
+        
+    }
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
 </style>
