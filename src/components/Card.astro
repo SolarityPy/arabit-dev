@@ -1,0 +1,29 @@
+---
+const { name, description, link } = Astro.props
+---
+
+<a href={link} target="_blank" rel="noopener noreferrer">
+    <div class="card">
+        <h3>{name}</h3>
+        <p>{description}</p>
+    </div>
+</a>
+
+
+<style>
+    a {
+        flex: 1;
+    }
+	.card {
+		padding: 1rem;
+		background-color: #303033;
+		color: #e7b1b1;
+		border-radius: 0.5rem;
+		border: 0.5px solid;
+        transition: background-color 0.2s;
+        height: 100%;
+	}
+	.card:hover {
+		background-color: #4f4f53;
+	}
+</style>

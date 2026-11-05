@@ -1,11 +1,45 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
 ---
 
 <Layout title="Karl, with a K!">
-	<p>Hello, world! Check out the <a href="/about">about page</a>.</p>
+	<ul>
+		<li><a href="/projects">My Projects</a></li>
+		<li><a href="https://www.linkedin.com/in/karlarabit/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+		<li><a href="mailto:karl@cyberacad.org">Email me!</a></li>
+	</ul>
+
 </Layout>
 
 <style>
-	p {color: white;}
+	.roles {
+		display: flex;
+		gap: 1rem;
+	}
+
+	a {
+		text-decoration: none;
+		color: white;
+		display: block;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		padding-left: 1rem;
+	}
+
+	li {
+		list-style: none;
+		transition: background-color 0.2s;
+		border-radius: 1rem;
+	}
+
+	li:hover {
+		background-color: rgba(44, 44, 48, 0.694);
+		cursor: pointer;
+	}
+
+	ul {
+		padding: 0;
+		
+	}
 </style>

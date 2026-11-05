@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+
+const projects = [
+	{name: "CyberAcad", description: "A 501(c)(3) cybersecurity non-profit, dedicated to training the next generation of cybersecurity.", link: "https://cyberacad.org"},
+	{name: "boroCTF", description: "A Capture-the-Flag competition that brought 2,000 competitors together from 93+ countries.", link: "https://boroctf.com"}
+	
+]
+---
+
+<Layout title="Karl, with a K!">
+	<div class="roles">
+		{projects.map(project => <Card name={project.name} description={project.description} link={project.link}/>)}
+	</div>
+
+</Layout>
+
+<style>
+	.roles {
+		display: flex;
+		gap: 1rem;
+	}
+
+	li {
+		list-style: none;
+		padding-top: 1rem;
+		transition: background-color 0.2s;
+		border-radius: 1rem;
+		padding-bottom: 1rem;
+		padding-left: 1rem;
+	}
+
+	li:hover {
+		background-color: rgba(44, 44, 48, 0.694);
+		cursor: pointer;
+	}
+
+	ul {
+		padding: 0;
+		
+	}
+</style>
